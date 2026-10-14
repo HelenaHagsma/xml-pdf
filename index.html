@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Conversor NF-e XML para PDF</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <header>
+        <h1>Conversor NF-e</h1>
+        <p>Converta arquivos XML de NF-e em PDF</p>
+      </header>
+
+      <section class="upload-area">
+        <input type="file" id="xmlInput" accept=".xml" multiple />
+
+        <label for="xmlInput">
+          <span>📁</span>
+          <strong>Selecionar arquivos XML</strong>
+          <small>Você pode selecionar vários arquivos</small>
+        </label>
+      </section>
+
+      <section class="files-section">
+        <div class="section-header">
+          <h2>Arquivos selecionados</h2>
+
+          <span id="fileCount"> 0 arquivos </span>
+        </div>
+
+        <div id="fileList" class="file-list">
+          <p class="empty-message">Nenhum arquivo selecionado.</p>
+        </div>
+      </section>
+
+      <section id="detailsSection" class="details-section">
+        <h2>Detalhes da NF-e</h2>
+
+        <div id="nfeDetails">
+          <p class="empty-message">
+            Selecione um arquivo para visualizar seus dados.
+          </p>
+        </div>
+      </section>
+
+      <button id="convertButton" disabled>Converter para PDF</button>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script src="js/xmlReader.js"></script>
+    <script src="js/pdfGenerator.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

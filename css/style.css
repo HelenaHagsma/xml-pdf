@@ -1,0 +1,308 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #666;
+}
+
+.upload-area {
+    margin-bottom: 30px;
+}
+
+#xmlInput {
+    display: none;
+}
+
+.upload-area label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 180px;
+
+    border: 2px dashed #aaa;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.upload-area label:hover {
+    border-color: #333;
+    background-color: #fafafa;
+}
+
+.upload-area span {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.upload-area strong {
+    margin-bottom: 5px;
+}
+
+.upload-area small {
+    color: #777;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.section-header h2 {
+    font-size: 18px;
+}
+
+#fileCount {
+    color: #666;
+}
+
+.file-list {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 15px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.file-item:last-child {
+    border-bottom: none;
+}
+
+.file-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.file-status {
+    font-size: 13px;
+    margin-left: 15px;
+}
+
+.valid {
+    color: green;
+}
+
+.invalid {
+    color: red;
+}
+
+.empty-message {
+    padding: 25px;
+    text-align: center;
+    color: #888;
+}
+
+#convertButton {
+    width: 100%;
+    margin-top: 25px;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #222;
+    color: white;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#convertButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.details-section {
+    margin-top: 30px;
+}
+
+.details-section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.nfe-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.nfe-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.nfe-header h3 {
+    font-size: 20px;
+}
+
+.nfe-header span {
+    color: #666;
+}
+
+.info-section {
+    margin-bottom: 25px;
+}
+
+.info-section h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.info-section p {
+    margin: 4px 0;
+    color: #555;
+}
+
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.products-table th,
+.products-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.products-table th {
+    background-color: #f5f5f5;
+}
+
+.products-table td:nth-child(3),
+.products-table td:nth-child(5) {
+    text-align: right;
+}
+
+.total-section {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+    text-align: right;
+}
+
+.total-section p {
+    margin: 5px 0;
+}
+
+.total-section .total {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.file-information {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    min-width: 0;
+}
+
+.file-information strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.file-information small {
+    color: #777;
+}
+
+.file-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 10px;
+}
+
+.view-button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+.remove-button {
+    border: none;
+    background: transparent;
+
+    color: #d00;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+.file-item {
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s,
+        border-color 0.2s;
+}
+
+.file-item:hover {
+    background-color: #f7f7f7;
+}
+
+.file-item.selected {
+    background-color: #f0f0f0;
+    border-color: #333;
+}
